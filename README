@@ -1,0 +1,50 @@
+2.Command 
+GAS; AI(BehaviorTree actions); EnhancedInput(ActionBind); Multiplayer Replay System; Undo/Redo 
+
+3. Flyweight 
+ISM&HISM; Material&M Instance; Texture sharing; Animation sharing; Niagara; Object Pool & Flyweight(e.g. bullet pool); Level Streaming & World Partition(SM in GameInstance, GameMode, DataAsset, World Settings in Level)
+
+ 4. Observer
+Delegates or BP EventDispatcher(eg. UI/Inventory System); AI Perception System&AI Controller(UAIPerceptionComponent & AAIController); Animation Notify(UAnimNotify & Combat/Sound Manager, Effect System) 
+
+5. Prototype 
+Data-Driven(Inventory Items, Enemies) 
+
+6. Singleton 
+Log System; Save/Load System; Game/Audio/Global Input/Settings Managers 
+
+7. State 
+Input Handling; Network 
+
+8. Double Buffer 
+Concurrency Scenarios: Rendering(DX SwapChain); Physics Simulations(positions, velocities); AI State; Animation(skeleton&shape interpolations); Networking(packets); Load/Save; Audio; PCG; RTS(AI Decision Tree, Pathfinding); FPS(Networking, Projectile) 
+
+11. Bytecode 
+Configs: Gameplay logics like NPC behaviors, event triggers, AI instructions; Cutscenes; Modding & DLC Support; Procedural Content Generation(heightmap, terrain, foliage, level etc.) 
+
+12. Subclass Sandbox 
+AI Behaviors(AIController & Character/Pawn) Inventory Item(Category via subclass sandbox; Value Design via data-driven; eg. weapon, food, potion) 
+
+13. Type Object 
+different item categories, complicated behaviors, to be extended in the future: subclass sandbox data sharing with slight differences: data-driven & type object, combined with factory method. 
+
+14. Component 
+GAS 
+
+15. Event Queue 
+Physics(deferred gameplay events like collision) Task System 
+
+16. Service Locator 
+AI(multiple NPCs, globally decision making); Audio; Event; Logger Where to register: GameMode, GameInstance, Level setups, UE built-in subsystem. In functions like Init() or BeginPlay(). 
+
+17. Locality 
+ECS(GAS&AoS, optimized: SoA); Level Streaming(adjacent partitions loading); Pathfinding 
+
+18. Dirty Flag 
+Deferred Updating: Scene Graph(TFs); Rendering(materials, textures, buffers); UI; Animation; Collision Detection 
+
+19. Object Pool 
+Niagara; SM & HSM; NPC; Bullet; Audio 
+
+—— 
+例子是结合自己的理论和实战知识潦草地总结出来的，有些写过有的还没亲手写过，主要针对UE5(Unity不熟😂)。 切换输入法麻烦，有点乱就这么着吧反正我能看懂就行😂
